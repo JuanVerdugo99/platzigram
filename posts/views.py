@@ -18,7 +18,7 @@ posts = [
     {
         'title': 'Via Láctea',
         'user': {
-            'name': 'Christian Van der Henst',
+            'name': 'Ian Verdugo',
             'picture': 'https://picsum.photos/60/60/?image=1005'
         },
         'timestamp': datetime.now().strftime('%b %dth, %Y - %H:%M hrs'),
