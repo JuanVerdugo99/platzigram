@@ -1,6 +1,7 @@
 """Posts views."""
 
 #Django
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 from datetime import datetime
@@ -18,7 +19,7 @@ posts = [
     {
         'title': 'Via Láctea',
         'user': {
-            'name': 'Ian Verdugo',
+            'name': 'Christian Van der Henst',
             'picture': 'https://picsum.photos/60/60/?image=1005'
         },
         'timestamp': datetime.now().strftime('%b %dth, %Y - %H:%M hrs'),
@@ -35,5 +36,6 @@ posts = [
     }
 ]
 
+@login_required
 def list_posts(request):
-    return render(request, 'feed.html', {'posts': posts})
+    return render(request, 'posts/feed.html', {'posts': posts})
